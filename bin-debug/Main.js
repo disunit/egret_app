@@ -52,47 +52,79 @@ var Main = (function (_super) {
     function Main() {
         return _super.call(this) || this;
     }
-    /**
-     * 重写父类方法 preload加载完成后初始化
-     */
-    Main.prototype.init = function () {
+    Main.prototype.RESLOAD = function () {
         return __awaiter(this, void 0, void 0, function () {
+            var loading, UI2D_scene, scene, aa, game, ui;
             return __generator(this, function (_a) {
-                return [2 /*return*/];
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, RES.loadGroup("preload", 0)];
+                    case 1:
+                        _a.sent(); //开始加载资源组
+                        loading = new UILoading();
+                        this.addChild(loading);
+                        UI2D_scene = {
+                            onProgress: function (current, total) {
+                                loading.setProgress("LOADING...", current, total);
+                            }
+                        };
+                        return [4 /*yield*/, RES.loadGroup("2DUI", 1, UI2D_scene)];
+                    case 2:
+                        _a.sent(); //开始加载2DUI资源组
+                        scene = function (current, total) {
+                            loading.setProgress("场景加载中...", current, total);
+                        };
+                        aa = function (current, total) {
+                            loading.setProgress("场景加载中...", current, total);
+                        };
+                        return [4 /*yield*/, App.Res3d.loadGroup("scene", 0, scene)];
+                    case 3:
+                        _a.sent(); //3D资源加载 用法和官方的RES.loadGroup一样；
+                        return [4 /*yield*/, App.Res3d.loadGroup("test", 0, aa)];
+                    case 4:
+                        _a.sent();
+                        game = new Scene(this.context3d);
+                        ui = new UI();
+                        this.addChild(ui);
+                        ui.alpha = 0;
+                        egret.Tween.get(loading).to({ alpha: 0 }, 800, egret.Ease.quadOut).call(function () {
+                            App.DisplayTool.removeMc(loading);
+                            game.create(); //显示3D场景
+                        });
+                        egret.Tween.get(ui).wait(700).to({ alpha: 1 }, 800, egret.Ease.quadOut);
+                        return [2 /*return*/];
+                }
             });
         });
-    };
-    /**
-     * 重写父类方法 开始程序
-     */
-    Main.prototype.startScene = function () {
-        console.log("程序开始");
-        var bg = App.DisplayTool.createBitmap("bg_jpg");
-        this.addChild(bg);
     };
     return Main;
 }(AppMain));
 Main = __decorate([
     RES.mapConfig("config.json", function () { return "resource"; }, function (path) {
         var ext = path.substr(path.lastIndexOf(".") + 1);
-        var typeMap = {
-            "jpg": "image",
-            "png": "image",
-            "webp": "image",
-            "json": "json",
-            "fnt": "font",
-            "pvr": "pvr",
-            "mp3": "sound"
-        };
-        var type = typeMap[ext];
-        if (type == "json") {
-            if (path.indexOf("sheet") >= 0) {
-                type = "sheet";
+        var type = "";
+        if (path.indexOf("3D") >= 0) {
+            type = "disunit";
+        }
+        else {
+            var typeMap = {
+                "jpg": "image",
+                "png": "image",
+                "webp": "image",
+                "json": "json",
+                "fnt": "font",
+                "pvr": "pvr",
+                "mp3": "sound"
+            };
+            type = typeMap[ext];
+            if (type == "json") {
+                if (path.indexOf("sheet") >= 0) {
+                    type = "sheet";
+                }
+                else if (path.indexOf("movieclip") >= 0) {
+                    type = "movieclip";
+                }
+                ;
             }
-            else if (path.indexOf("movieclip") >= 0) {
-                type = "movieclip";
-            }
-            ;
         }
         return type;
     })

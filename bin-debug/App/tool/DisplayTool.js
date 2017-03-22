@@ -17,16 +17,16 @@ var DisplayTool = (function (_super) {
     }
     /**
      * 根据name关键字创建一个Bitmap对象。name属性请参考resources/resource.json配置文件的内容。
-     * @param  {string} name 资源的名字
+     * @param  {string} _name 资源的名字
      * @param  {number} anX 设置X的中心点位置
      * @param  {number} anY 设置Y的中心点位置
      * @returns egret资源对象
      */
-    DisplayTool.prototype.createBitmap = function (name, anX, anY) {
+    DisplayTool.prototype.createBitmap = function (_name, anX, anY) {
         if (anX === void 0) { anX = 0; }
         if (anY === void 0) { anY = 0; }
         var result = new egret.Bitmap();
-        var texture = RES.getRes(name);
+        var texture = RES.getRes(_name);
         result.texture = texture;
         result.anchorOffsetX = (anX <= 1 && anX >= 0) ? result.width * anX : anX;
         result.anchorOffsetY = (anY <= 1 && anY >= 0) ? result.height * anY : anY;

@@ -1,32 +1,143 @@
 {
 	"alias": {
-		"bg_jpg": "assets/bg.jpg",
-		"egret_icon_png": "assets/egret_icon.png",
-		"description_json": "config/description.json"
+		"loadBlock_png": "2D/2Dload/loadBlock.png",
+		"loadMan_png": "2D/2Dload/loadMan.png",
+		"UI_btn_submit_png": "2D/2DUI/UI_btn_submit.png",
+		"UI_friend_png": "2D/2DUI/UI_friend.png",
+		"UI_music_png": "2D/2DUI/UI_music.png",
+		"UI_rank_png": "2D/2DUI/UI_rank.png",
+		"UI_rule_png": "2D/2DUI/UI_rule.png",
+		"UI_botten_png": "2D/2DUI/UI_botten.png",
+		"UI_btn_replay_png": "2D/2DUI/UI_btn_replay.png",
+		"block7_png": "3D/block/block7.png",
+		"block1_png": "3D/block/block1.png",
+		"block2_png": "3D/block/block2.png",
+		"block3_png": "3D/block/block3.png",
+		"block4_png": "3D/block/block4.png",
+		"block5_png": "3D/block/block5.png",
+		"block6_png": "3D/block/block6.png",
+		"MapConfig_json": "3D/test/0_Model/MapConfig.json",
+		"hero_01_png": "3D/test/0_Model/Texture/hero_01.png",
+		"bodyAo_jpg": "3D/test/ao/bodyAo.jpg",
+		"brakeAo_jpg": "3D/test/ao/brakeAo.jpg",
+		"carbon_fiberAo_jpg": "3D/test/ao/carbon_fiberAo.jpg",
+		"fenderAo_jpg": "3D/test/ao/fenderAo.jpg",
+		"otherAo_jpg": "3D/test/ao/otherAo.jpg",
+		"Plane001Ao_jpg": "3D/test/ao/Plane001Ao.jpg",
+		"wheelAo_jpg": "3D/test/ao/wheelAo.jpg",
+		"Wheel_hubAo_jpg": "3D/test/ao/Wheel_hubAo.jpg",
+		"home1_jpg": "3D/test/map/home1.jpg",
+		"map_png": "3D/test/map/map.png",
+		"t1_png": "3D/test/map/t1.png",
+		"t2_png": "3D/test/map/t2.png",
+		"t3_png": "3D/test/map/t3.png",
+		"background_jpg": "3D/test/background.jpg"
 	},
 	"groups": {
 		"preload": [
-			"bg_jpg",
-			"egret_icon_png",
-			"description_json"
+			"loadBlock_png",
+			"loadMan_png"
+		],
+		"2DUI": [
+			"UI_botten_png",
+			"UI_btn_replay_png",
+			"UI_btn_submit_png",
+			"UI_friend_png",
+			"UI_music_png",
+			"UI_rank_png",
+			"UI_rule_png"
 		],
 		"scene": [
-			"bg_jpg",
-			"egret_icon_png"
+			"block1_png",
+			"block2_png",
+			"block3_png",
+			"block4_png",
+			"block5_png",
+			"block6_png",
+			"block7_png"
 		],
-		"music": [
-			"bg_jpg"
+		"test": [
+			"hero_01_png",
+			"bodyAo_jpg",
+			"brakeAo_jpg",
+			"carbon_fiberAo_jpg",
+			"fenderAo_jpg",
+			"otherAo_jpg",
+			"Plane001Ao_jpg",
+			"wheelAo_jpg",
+			"Wheel_hubAo_jpg",
+			"home1_jpg",
+			"map_png",
+			"t1_png",
+			"t2_png",
+			"t3_png",
+			"background_jpg"
 		]
 	},
 	"resources": {
 		"config.json": "config.json",
 		"default.res.json": "default.res.json",
-		"assets": {
-			"bg.jpg": "assets/bg.jpg",
-			"egret_icon.png": "assets/egret_icon.png"
+		"2D": {
+			"2DUI": {
+				"UI_botten.png": "2D/2DUI/UI_botten.png",
+				"UI_btn_replay.png": "2D/2DUI/UI_btn_replay.png",
+				"UI_btn_submit.png": "2D/2DUI/UI_btn_submit.png",
+				"UI_friend.png": "2D/2DUI/UI_friend.png",
+				"UI_music.png": "2D/2DUI/UI_music.png",
+				"UI_rank.png": "2D/2DUI/UI_rank.png",
+				"UI_rule.png": "2D/2DUI/UI_rule.png"
+			},
+			"2Dload": {
+				"loadBlock.png": "2D/2Dload/loadBlock.png",
+				"loadMan.png": "2D/2Dload/loadMan.png"
+			}
 		},
-		"config": {
-			"description.json": "config/description.json"
+		"3D": {
+			"block": {
+				"block1.png": "3D/block/block1.png",
+				"block2.png": "3D/block/block2.png",
+				"block3.png": "3D/block/block3.png",
+				"block4.png": "3D/block/block4.png",
+				"block5.png": "3D/block/block5.png",
+				"block6.png": "3D/block/block6.png",
+				"block7.png": "3D/block/block7.png"
+			},
+			"test": {
+				"background.jpg": "3D/test/background.jpg",
+				"0_Model": {
+					"MapConfig.json": "3D/test/0_Model/MapConfig.json",
+					"Eam": {
+						"attack.eam": "3D/test/0_Model/Eam/attack.eam",
+						"idle.eam": "3D/test/0_Model/Eam/idle.eam"
+					},
+					"Esm": {
+						"Zhouyu.esm": "3D/test/0_Model/Esm/Zhouyu.esm"
+					},
+					"Texture": {
+						"hero_01.png": "3D/test/0_Model/Texture/hero_01.png"
+					}
+				},
+				"ao": {
+					"Plane001Ao.jpg": "3D/test/ao/Plane001Ao.jpg",
+					"Wheel_hubAo.jpg": "3D/test/ao/Wheel_hubAo.jpg",
+					"bodyAo.jpg": "3D/test/ao/bodyAo.jpg",
+					"brakeAo.jpg": "3D/test/ao/brakeAo.jpg",
+					"carbon_fiberAo.jpg": "3D/test/ao/carbon_fiberAo.jpg",
+					"fenderAo.jpg": "3D/test/ao/fenderAo.jpg",
+					"otherAo.jpg": "3D/test/ao/otherAo.jpg",
+					"wheelAo.jpg": "3D/test/ao/wheelAo.jpg"
+				},
+				"map": {
+					"home1.esm": "3D/test/map/home1.esm",
+					"home1.jpg": "3D/test/map/home1.jpg",
+					"home2.esm": "3D/test/map/home2.esm",
+					"map.esm": "3D/test/map/map.esm",
+					"map.png": "3D/test/map/map.png",
+					"t1.png": "3D/test/map/t1.png",
+					"t2.png": "3D/test/map/t2.png",
+					"t3.png": "3D/test/map/t3.png"
+				}
+			}
 		}
 	}
 }

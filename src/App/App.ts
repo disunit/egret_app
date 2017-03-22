@@ -60,12 +60,20 @@ class App {
 		return Http.getInstance();
 	}
 	
+	/**
+	 * 3D项目的分组资源加载
+	 */
+	public static get Res3d():Res3d{
+		return Res3d.getInstance();
+	}
+	
 
 	/**
 	 * 初始化框架
 	 */
 	public static async init() {
-		console.log(GlobalData.myCompany + ":" + GlobalData.myName + " - " + GlobalData.createTime);
+		console.log("github:",GlobalData.myCompany,'\n------:',GlobalData.myQQ,'\n------:',GlobalData.myMail);
 		App.StageTool.setFrameRate(60);
+		App.StageTool.setMaxTouches(1);
 	}
 }

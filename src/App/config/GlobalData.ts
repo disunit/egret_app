@@ -7,7 +7,7 @@ module GlobalData {
 	/**
 	 * 公司的名字
 	 */
-    export var myCompany: string = "博采网络";
+    export var myCompany: string = "https://github.com/disunit";
 	/**
 	 * 我的名字
 	 */
@@ -15,15 +15,24 @@ module GlobalData {
 	/**
 	 * 项目创建时间
 	 */
-    export var createTime: string = "2017/03/14";
+    export var createTime: string = "2017/03/22";
 	/**
 	 * 我的邮箱
 	 */
     export var myMail: string = "disunit@qq.com";
+	/**
+	 * 我的QQ
+	 */
+    export var myQQ: string = "912054564";
 
 	/**
 	 * 是否开启调试模式
 	 */
 	export var Debug:boolean=true;
+
+	/**
+	 * 2D/3D/2D-3D
+	 */
+	export var ShowD:string="3D";
 	
 }

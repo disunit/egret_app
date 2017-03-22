@@ -123,14 +123,25 @@ var App = (function () {
         enumerable: true,
         configurable: true
     });
+    Object.defineProperty(App, "Res3d", {
+        /**
+         * 3D项目的分组资源加载
+         */
+        get: function () {
+            return Res3d.getInstance();
+        },
+        enumerable: true,
+        configurable: true
+    });
     /**
      * 初始化框架
      */
     App.init = function () {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
-                console.log(GlobalData.myCompany + ":" + GlobalData.myName + " - " + GlobalData.createTime);
+                console.log("github:", GlobalData.myCompany, '\n------:', GlobalData.myQQ, '\n------:', GlobalData.myMail);
                 App.StageTool.setFrameRate(60);
+                App.StageTool.setMaxTouches(1);
                 return [2 /*return*/];
             });
         });

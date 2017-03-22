@@ -1,26 +1,28 @@
 {
-  "native": {
-    "path_ignore": []
-  },
-  "publish": {
-    "web": 0,
-    "native": 1,
-    "path": "bin-release"
-  },
-  "egret_version": "4.0.3",
-  "modules": [
-    {
-      "name": "egret"
+    "native": {
+        "path_ignore": []
     },
-    {
-      "name": "game"
+    "publish": {
+        "web": 0,
+        "native": 1,
+        "path": "bin-release"
     },
-    {
-      "name": "resourcemanager",
-      "path": "resourcemanager"
-    },
-    {
-      "name": "tween"
-    }
-  ]
+    "egret_version": "4.0.3",
+    "modules": [{
+            "name": "egret"
+        },
+        {
+            "name": "game"
+        },
+        {
+            "name": "egret3d"
+        },
+        {
+            "name": "tween"
+        },
+        {
+            "name": "resourcemanager",
+            "path": "resourcemanager"
+        }
+    ]
 }
