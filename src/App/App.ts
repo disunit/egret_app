@@ -61,6 +61,13 @@ class App {
 	}
 	
 	/**
+	 * 字典工具
+	 */
+	public static get Dictionary():Dictionary{
+		return Dictionary.getInstance();
+	}
+	
+	/**
 	 * 3D项目的分组资源加载
 	 */
 	public static get Res3d():Res3d{
