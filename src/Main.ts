@@ -38,6 +38,11 @@ class Main extends AppMain {
 		
 		let loading = new UILoading();//添加loading页面
 		this.addChild(loading);
+// 		//proto的用法
+// 		var Proto:any;
+// 		protobuf.load("resource/js/mjgame.proto", (e, root) => {
+// 			Proto = root.QCLOUD;
+// 		});
 
 		let UI2D_scene: RES.PromiseTaskReporter = {//2DUI资源组加载回调
 			onProgress(current: number, total: number) {
